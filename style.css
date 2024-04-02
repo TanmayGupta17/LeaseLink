@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header{
+    height: 80px;
+    background-color: #ffcc06;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0rem ;
+}
+.logo{
+    padding-left: 40px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    padding: 0rem 1.5rem;
+}
+header a:hover{
+    color: white;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 710px;
+    background-color: #ffcc06;
+    color: #0000;
+    z-index: -1;
+}
+.content {
+    height: 100vh;
+    z-index: 10;
+    color: black;
+}
+.content h1{
+    margin-bottom: 10px;
+    margin-top: 150px;
+    margin-left: 40px;
+}
+.content p{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    line-height: 1.5;
+}
+
+.content button{
+    background-color: black;
+    color:#ffcc06;
+    margin: 0px;
+    padding: 1rem 1.5rem 1rem 1.5rem ;
+    margin-left: 40%;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+footer{
+    background-color: black;
+    color:white;
+    text-align: center;
+}
+
+
