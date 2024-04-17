@@ -1,3 +1,4 @@
+<? php include('server.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,28 +16,28 @@
         </div>
     </div>
     <div class="wrapper">
-        <form action="">
+        <form action="server.php">
             <h1>SIGN UP</h1>
             <div class="input">
-                <input type="text" placeholder="username">
+                <input type="text" placeholder="username" name="username">
             </div>
             <div class="input">
-                <input type="text" placeholder="adhaarID">
+                <input type="text" placeholder="adhaarID" name ="aadharID">
             </div>
             <div class="input">
-                <input type="text" placeholder="Pan no.">
+                <input type="text" placeholder="Pan no." name ="Pan_no">
             </div>
             <div class="input">
-                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Email" name ="Email">
             </div>
             <div class="input">
-                <input type="text" placeholder="Phone no.">
+                <input type="text" placeholder="Phone no." name="Phone_no">
             </div>
             <div class="input">
-                <input type="password" placeholder="password">
+                <input type="password" placeholder="password" name ="password">
             </div>
 
-            <button type="submit" class="btn">
+            <button type="submit" class="btn" name = "reg_user" onclick="location.href='property.html'">
                 Sign Up
             </button>
             <div class="signup">
