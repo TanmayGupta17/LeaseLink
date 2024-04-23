@@ -31,10 +31,11 @@ header{
     border-radius: 30px;
     cursor: pointer;
 }
+
 #card{
     margin-right: 10rem;
 }
-#a:hover{
+.change :hover{
     background-color: white;
     color: black;
     transition-duration: 0.5s;
@@ -42,6 +43,11 @@ header{
     padding: 1.5rem 2rem 1.5rem 2rem; */
     /* animation: enlarge 0.5s  0.1s alternate ;
     animation-iteration-count : unset; */
+}
+#logout:hover{
+    background-color: red;
+    color: red;
+    transition-duration: 0.5s;
 }
 #container{
     padding-left: 1%;
@@ -73,4 +79,23 @@ main{
 }
 #d{
     background-color: #191919;
+}
+#btn{
+    margin-top: 4rem;
+    width: 7rem;
+    height: 45px;
+    background: #000;
+    border: none;
+    outline:none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+#btn:hover{
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.5s;
 }
