@@ -22,7 +22,7 @@ header{
 }
 
 header a{
-    color: black;
+    color: #000;
     text-decoration: none;
     padding: 0rem 1.5rem;
     font-size: large;
@@ -79,6 +79,7 @@ header a:hover{
     backdrop-filter: blur(7px);
     box-shadow: 0 0 10px rgba(0,0,0,.2); 
     color: #000;
+    /* background-color: #fff; */
     border-radius: 10px;
     padding: 30px 40px;
 }
