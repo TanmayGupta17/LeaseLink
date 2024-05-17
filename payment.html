@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="pay.css">
+</head>
+<body>
+    <div class="payment-container">
+        <h1>Payment Gateway</h1>
+        <br>
+        <form id="payment-form" action="transaction.php" method="post">
+            <output type="text" id="price" name="price"></output>
+            <label for="cvv">Confirm your Username:</label>
+            <input type="text" id="Username" name="sellerid" required>
+            <label for="cvv">Confirm the Property ID:</label>
+            <input type="text" id="Username" name="propertyid" required>
+            <label for="cvv">Confirm the Amount:</label>
+            <input type="text" id="Username" name="price" required>
+            
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" required>
+            <label for="expiry-date">Expiry Date:</label>
+            <input type="text" id="expiry-date" name="expiry-date" required>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" required>
+            <button type="submit">Make Payment</button>
+        </form>
+        <script src="pay.js" onclick="location.href='confirmation.html'"></script>
+    </div>
+</body>
+</html>

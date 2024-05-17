@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LeaseLink</title>
+    <link rel="stylesheet" href="contactstyle.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact LeaseLink</h1>
+            <p>Got questions or feedback? Reach out to us!</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Whether you have a question about our services, need assistance, or just want to say hello, feel free to contact us using the form below or through our contact information.</p>
+
+            <form action="contact.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="username" required>
+
+                <label for="email">Your Problem/Text Title:</label>
+                <input type="text" id="email" name="title" required>
+
+                <label for="message">Your Message/Description:</label>
+                <textarea id="message" name="description" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Email: info@leaselink.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+                <p>Address: lab-1 , Academic Block-5 , MIT Manipal , Eshwar Nagar, Manipal, Karnataka 576104</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 LeaseLink. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

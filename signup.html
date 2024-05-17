@@ -1,0 +1,51 @@
+<?php include('connect.php') ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signupstyle.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <form action="connect.php" method="post">
+	    <div class="option">
+        	<p>Are you a Buyer or a Seller?<p>
+        	<div class="radio">
+            		<input type="radio" name="userType" value="buyer">Buyer
+            		<input type="radio" name="userType" value="seller">Seller
+        	</div>
+    	    </div>
+            <h1>SIGN UP</h1>
+            <div class="input">
+                <input type="text" placeholder="username" name="username" required>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="adhaarID" name="aadharID" required>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Pan no." name="Pan_no" required>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Email" name="email" required>
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Phone no." name="PhoneNo" required>
+            </div>
+            <div class="input">
+                <input type="password" placeholder="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary" name="save_radio">
+                Sign Up
+            </button>
+            <div class="signup">
+                <p>aldready have an account?<a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>  
+</body>
+</html>

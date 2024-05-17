@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+header a:hover{
+    font-size: x-large;
+    color: white;
+    transition-duration: 0.5s;
+}
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; */
+    background: #ffcc06;
+    /* background-image: url("./mai3.png");
+    background-size:cover;  */
+    
+}
+header .logo:hover{
+    font-size: x-large;
+    transition-duration: 0.5s; 
+}
+header{
+    height: 80px;
+    width: 100%;
+    background-color: #ffcc06;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0rem ;
+}
+.logo{
+    padding-left: 40px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+}
+
+header a{
+    color: black;
+    text-decoration: none;
+    padding: 0rem 1.5rem;
+    font-size: large;
+    transition-duration: 0.5s;
+}
+header a:hover{
+    color: white;
+}
+.payment-container {
+    max-width: 500px;
+    height: 23rem;
+    width: 19rem;
+    margin: 50px auto;
+    padding: 80px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.payment-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-container label {
+    margin-bottom: 8px;
+}
+
+.payment-container input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.payment-container button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.payment-container button:hover {
+    background-color: #0056b3;
+}
+
+.payment-container button:active {
+    background-color: #004080;
+}
+

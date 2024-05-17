@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+p{
+    text-align: center;
+    justify-content: center;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffcc06;
+    background-image: url("bg1.png");
+    background-size: cover;
+    
+}
+
+.option{
+    margin-top: -13px;
+    margin-bottom: 18px;
+    width: 334px;
+    line-height: 40px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.option .radio{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrapper{
+    margin-top: 10%;
+    width: 420px;
+    margin-bottom: 10%;
+    /* background-color: #ffcc06; */
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2); 
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+.wrapper h1{
+    text-align: center;
+    font-size: 36px;
+}
+/* .wrapper .radio{
+    width: 50%;
+    backdrop-filter: none;
+    box-shadow: none;
+    border: none;
+} */
+.wrapper input{
+    width: 100%;
+    height: 15px;
+    background: transparent;
+    /* border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2); */
+    margin: 9.9px 0;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input input::placeholder{
+    color:#fff;
+}
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline:none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .signup{
+    font-size: 14.5px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.signup p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup p a:hover{
+    text-decoration: underline;
+}
+.wrapper .btn:hover{
+    background-color: #000;
+    color: #fff;
+    transition-duration: 0.5s;
+}

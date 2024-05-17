@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaseLink</title>
+    <link rel="stylesheet" href="p.css">
+</head>
+<body>
+    <header>
+        <a class="logo">LeaseLink</a>
+        <div class="nav_items">
+            <a href="pview.html">View Properties</a>
+            <a href="propertypage.html">Back</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+    <div class="wrapper">
+        <form action="addproperty.php" method="post">
+            <h1>PROPERTY</h1>
+            <div class="input">
+                <input type="text" placeholder="property id" name="PropertyID">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="BHK" name ="BHK">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="amenities" name ="amenities">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="price" name ="price">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="full address" name="address">
+            </div>
+            <div class="input">
+                <input type="text" placeholder="postal code" name ="postal_code">
+            </div>
+
+            <button type="submit" class="btn" name = "reg_user" onclick="location.href='property.html'">
+                ADD
+            </button>
+            <div class="signup">
+                <p>Want to view your properties?  <a href="lview.html">view</a></p>
+            </div>
+        </form>
+    </div>
+    <footer>made with &hearts; by LeaseLink team</footer>
+    <script src="first.js"></script>
+</body>
+</html>

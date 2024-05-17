@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate</title>
+    <link rel="stylesheet" href="rating.css">
+</head>
+<body>
+    <header>
+        <a class="logo">LeaseLink</a>
+        <div class="nav_items">
+            <a href="plisting.html">List/View Property</a>
+            <a href="contact.html">Contact</a>
+            <a href="index.html">Logout</a>
+        </div>
+    </header>
+    <div class="payment-container">
+        <h1>RATING</h1>
+        <br>
+        <form id="payment-form" action="rating.php" method="post">
+            <label for="card-number">Property ID:</label>
+            <input type="text" id="card-number" name="property_id" required>
+            <label for="expiry-date">Rating(out of 5):</label>
+            <input type="text" id="expiry-date" name="rate" required>
+            <label for="cvv">Description:</label>
+            <input type="text" id="cvv" name="description" required>
+            <button type="submit">Submit Rating</button>
+        </form>
+        <script src="pay.js" onclick="location.href='confirmation.html'"></script>
+    </div>
+</body>
+</html>
+

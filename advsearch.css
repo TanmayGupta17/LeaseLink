@@ -1,0 +1,126 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+h4{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+.filter {
+    border: 1px solid #000;
+    padding: 10px;
+    margin-right: 40px;
+    border-radius: 5px;
+}
+
+.filter input {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 3px;
+    border: 1px solid #000;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    background-color: #45a049;
+}
+
+.separator {
+    /* border-top: 1px solid #000;
+    margin: 20px 0;  */
+
+}
+header{
+    height: 80px;
+    background-color: #ffcc06;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0rem ;
+}
+.logo{
+    padding-left: 40px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+}
+#last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+#a{
+    background-color: black;
+    color:#ffcc06;
+    margin: 0px;
+    font-size: large;
+    padding: 1rem 2rem 1rem 1.5rem ;
+    margin-left: 10px;
+    margin-top: 0.5%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+#card{
+    margin-right: 10rem;
+}
+#a:hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.5s;
+    /* transition-duration: 0.5s ;
+    padding: 1.5rem 2rem 1.5rem 2rem; */
+    /* animation: enlarge 0.5s  0.1s alternate ;
+    animation-iteration-count : unset; */
+}
+#container{
+    padding-left: 1%;
+}
+header a{
+    color: black;
+    text-decoration: none;
+    padding: 0rem 1.5rem;
+    font-size: large;
+    transition-duration: 0.5s;
+}
+header a:hover{
+    font-size: x-large;
+    color: white;
+    transition-duration: 0.5s;
+}
+footer{
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #191919;
+    color:white;
+    text-align: center;
+}
+main{
+    background-color: #ffcc06;
+}
+#album py-5 bg-body-tertiary {
+    background-color: #ffcc06;
+    color: #ffcc06;
+}
+#d{
+    background-color: #191919;
+}
+rect{
+    background-image: url("bg1.png");
+    background-size: cover;
+}

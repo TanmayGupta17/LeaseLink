@@ -1,0 +1,104 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#username{
+    margin-left: 40%;
+}
+header{
+    height: 80px;
+    background-color: #ffcc06;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 0rem ;
+}
+.logo{
+    padding-left: 40px;
+    font-style: italic;
+    font-size: larger;
+    font-weight: bold;
+}
+#last{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#a{
+    background-color: black;
+    color:#ffcc06;
+    margin: 0px;
+    font-size: large;
+    padding: 1rem 2rem 1rem 2rem ;
+    margin-left: 30px;
+    margin-top: 10%;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#card{
+    margin-right: 10rem;
+}
+.change :hover{
+    background-color: white;
+    color: black;
+    transition-duration: 0.5s;
+    /* transition-duration: 0.5s ;
+    padding: 1.5rem 2rem 1.5rem 2rem; */
+    /* animation: enlarge 0.5s  0.1s alternate ;
+    animation-iteration-count : unset; */
+}
+#logout:hover{
+    background-color: red;
+    color: red;
+    transition-duration: 0.5s;
+}
+#container{
+    padding-left: 1%;
+}
+header a{
+    color: black;
+    text-decoration: none;
+    padding: 0rem 1.5rem;
+    font-size: large;
+    transition-duration: 0.5s;
+}
+header a:hover{
+    font-size: x-large;
+    color: white;
+    transition-duration: 0.5s;
+}
+footer{
+    margin-top: 2rem;
+    background-color: #191919;
+    color:white;
+    text-align: center;
+}
+main{
+    background-color: #ffcc06;
+}
+#album py-5 bg-body-tertiary {
+    background-color: #ffcc06;
+    color: #ffcc06;
+}
+#d{
+    background-color: #191919;
+}
+#btn{
+    margin-top: 4rem;
+    width: 7rem;
+    height: 45px;
+    background: #000;
+    border: none;
+    outline:none;
+    border-radius:40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+#btn:hover{
+    background-color: #fff;
+    color: #000;
+    transition-duration: 0.5s;
+}
