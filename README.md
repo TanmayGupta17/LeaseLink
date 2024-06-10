@@ -12,18 +12,5 @@ Users can search for properties based on criteria such as budget, location, and 
 ### User Authentication:
 Users can create accounts and log in securely.
 
-###Rating System:
+### Rating System:
 Buyers can rate properties they have rented or bought, providing feedback for other users.
-
-## Usage
-### Sign Up:
-Create an account on LeaseLink.
-
-### List Properties:
-Sellers can list their properties with detailed information.
-
-### Search for Properties:
-Tenants or buyers can search for properties based on their preferences.
-
-### Rate Properties:
-After renting or buying a property, users can rate their experience.
