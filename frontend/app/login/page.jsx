@@ -24,6 +24,7 @@ const Page = () => {
   
       if (response.ok) {
         console.log("Login successful", data);
+        localStorage.setItem("token", data.token); // Store the token in localStorage
         login({ name: data.name, token: data.token }); // Call login from AuthContext
         window.location.href = "/allProperties"; // Redirect to the properties page
       } else {

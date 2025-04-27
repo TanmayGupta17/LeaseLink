@@ -1,7 +1,7 @@
 const {getUser} = require('../services/auth');
 
 const checkforAuthentication = (req, res, next) => {
-    const token = req.cookies.uuid || req.headers.authorization?.split("Bearer ")[1]; 
+    const token = req.headers.authorization?.split("Bearer ")[1]; 
     console.log("token recieved: "+ token);
     if(!token){
         return res.status(401).json({message: "Unauthorized"});

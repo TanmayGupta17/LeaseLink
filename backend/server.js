@@ -21,7 +21,7 @@ app.listen(PORT,() =>{
 });
 
 app.get('/',(req,res)=>{
-    res.send("Server is up and running......")
+    res.send("LeaseLink Server is Live......")
 });
 
 // Middleware

@@ -1,6 +1,8 @@
 "use client";
 import Propertycard from "@/Components/Propertycard";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
+
 
 const AllPropertiesPage = () => {
   const [properties, setProperties] = useState([]); // State to store properties
@@ -76,7 +78,8 @@ const AllPropertiesPage = () => {
         <h1 className="text-3xl font-bold text-gray-800 mb-6">All Properties</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {properties.map((property) => (
-            <div key={property._id} className="bg-white shadow-md rounded-lg p-4">
+            <Link href={`/viewProperty/${property._id}`} key={property._id}>
+            <div className="bg-white shadow-md rounded-lg p-4 cursor-pointer">
               <Propertycard
                 img={property.images?.[0] || "https://via.placeholder.com/300"}
                 title={property.title || "No Title"}
@@ -87,8 +90,9 @@ const AllPropertiesPage = () => {
                 bathrooms={property.bathrooms || 0}
                 area={property.area || "N/A"}
                 leaseDuration={property.leaseDuration || "N/A"}
-                />
+              />
             </div>
+          </Link>
           ))}
         </div>
       </div>

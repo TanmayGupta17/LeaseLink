@@ -82,7 +82,25 @@ const GetAllProperties = async(req,res) => {
     }
 }
 
+const GetPropertyById = async (req, res) => {
+    try {
+        const propertyId = req.params.id;
+        console.log("Property ID:", propertyId); // Log the property ID for debugging
+        const property = await Property.findById(propertyId);
+        console.log("Fetched Property:", property); // Log the fetched property for debugging
+        if (!property) {
+            return res.status(404).json({ message: "Property not found" });
+        }
+        return res.status(200).json({ message: "Property found", property });
+    }
+    catch (error) {
+        console.error("Error while fetching property by ID", error);
+        return res.status(500).json({ message: "Error while fetching property" });
+    }
+}
+
 module.exports = { 
     CreateProperty,
-    GetAllProperties 
+    GetAllProperties,
+    GetPropertyById
 };
