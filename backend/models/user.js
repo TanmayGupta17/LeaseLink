@@ -17,7 +17,16 @@ const userSchema = new mongoose.Schema({
     role:{
         type:String,
         default:"user"
-    }
+    },
+    status:{
+        type:String,
+        default:"active"
+    },
+    lastActivity:{
+        type:Date,
+        default:Date.now,
+        timestamps:true,
+    },
 },
 {
     timestamps: true

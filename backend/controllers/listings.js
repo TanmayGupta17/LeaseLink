@@ -1,4 +1,6 @@
 const Property = require("../models/property");
+const LogActivity = require("../models/Logactivity");
+const User = require("../models/user");
 
 const CreateProperty = async (req, res) => {
   try {
@@ -62,7 +64,16 @@ const CreateProperty = async (req, res) => {
       leaseEndDate: endDate,     // Save as Date object
       owner: req.user._id // Assuming `req.user` contains the authenticated user's data
     });
-
+     
+    const logActivity = await LogActivity.create({
+      userId: req.user._id,
+      activityType: "property_creation",
+      action: "User created a property",
+      details: { propertyId: property._id, title: property.title, location: property.location },
+    });
+    const updateUser = await User.findByIdAndUpdate(existingUser._id, {
+            lastActivity: new Date(),
+        }, { new: true });
     // Send success response
     return res.status(201).json({ message: "Property created successfully", property });
   } catch (error) {
@@ -91,6 +102,16 @@ const GetPropertyById = async (req, res) => {
         if (!property) {
             return res.status(404).json({ message: "Property not found" });
         }
+        const logActivity = await LogActivity.create({
+          userId: req.user._id,
+          activityType: "property_view",
+          action: "User viewed property",
+          details: {propertyId: property._id, title: property.title, location: property.location },
+      });
+      console.log(req.user._id);
+      const updateUser = await User.findByIdAndUpdate(req.user._id, {
+        lastActivity: new Date(),
+      }, { new: true });
         return res.status(200).json({ message: "Property found", property });
     }
     catch (error) {
@@ -99,8 +120,28 @@ const GetPropertyById = async (req, res) => {
     }
 }
 
+const GetUserProperties = async (req, res) => {
+  try {
+      const userId = req.user._id;
+      console.log("User ID:", userId);
+
+      const properties = await Property.find({ owner: userId });
+
+      if (!properties || properties.length === 0) {
+          return res.status(404).json({ message: "No properties found for this user" });
+      }
+
+      return res.status(200).json({ message: "User properties found", properties });
+  } catch (error) {
+      console.error("Error while fetching user properties", error);
+      return res.status(500).json({ message: "Error while fetching user properties", error: error.message });
+  }
+};
+
+
 module.exports = { 
     CreateProperty,
     GetAllProperties,
-    GetPropertyById
+    GetPropertyById,
+    GetUserProperties
 };

@@ -1,5 +1,6 @@
 const User = require("../models/user");
 const { setUser } = require("../services/auth");
+const LogActivity = require("../models/Logactivity");
 
 const handleUserSignup = async(req,res) => {
     const { name, email, password } = req.body;
@@ -25,6 +26,21 @@ const handleUserLogin = async(req,res) =>{
         secure: false,
         sameSite: 'lax',
     });
+    const logActivity = await LogActivity.create({
+        userId: existingUser._id,
+        activityType: "login",
+        action: "User logged in",
+        details: { email },
+    });
+
+    if (!logActivity) {
+        console.error("Error logging activity");
+        return res.status(500).json({ message: "Error logging activity" });
+    }
+
+    const updateUser = await User.findByIdAndUpdate(existingUser._id, {
+        lastActivity: new Date(),
+    }, { new: true });
     return res.status(200).json({message: "User Logged in Successfully ",token});
 }   
 

@@ -7,6 +7,7 @@ const {checkforAuthentication,restrictTo} = require('./middleware/auth');
 //routes
 const userRouter = require('./routes/user');
 const listingRouter = require('./routes/listings');
+const adminRouter = require('./routes/admin');
 
 connectDB("mongodb+srv://tanmay:tanmay123@cluster0.nx1ii.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0").then(()=>{
     console.log("Connected to MongoDB");
@@ -36,4 +37,5 @@ app.use(cors({
 
 app.use("/user",userRouter);
 app.use("/Property", checkforAuthentication, listingRouter);
+app.use("/admin",checkforAuthentication, restrictTo(["Admin"]), adminRouter);
 

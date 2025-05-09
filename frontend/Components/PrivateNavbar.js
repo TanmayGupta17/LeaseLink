@@ -20,6 +20,7 @@ import {
   X,
 } from "lucide-react";
 
+
 const PrivateNavbar = () => {
   const { isAuthenticated, user, logout } = useContext(AuthContext); // Consume AuthContext
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -558,7 +559,7 @@ const PrivateNavbar = () => {
                             </div>
 
                             <a
-                              href="/admin/dashboard"
+                              href="/analyticsDashboard"
                               className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               <BarChart className="h-4 w-4 mr-3 text-gray-500" />
@@ -566,7 +567,7 @@ const PrivateNavbar = () => {
                             </a>
 
                             <a
-                              href="/admin/users"
+                              href="/userManagement"
                               className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               <Users className="h-4 w-4 mr-3 text-gray-500" />
@@ -623,7 +624,7 @@ const PrivateNavbar = () => {
                           </div>
 
                           <a
-                            href="/dashboard"
+                            href="/DashBoard"
                             className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                           >
                             <Home className="h-4 w-4 mr-3 text-gray-500" />
