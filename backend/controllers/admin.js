@@ -1,6 +1,7 @@
 const express = require('express');
 const user = require('../models/user');
 const property = require('../models/property');
+const LogActivity = require('../models/Logactivity');
 
 const DataAnalytics = async (req, res) => {
     try {
@@ -72,8 +73,46 @@ const GetAllUsers = async (req, res) => {
     }
 };
 
+const GetUserProperties = async (req, res) => {
+  const { userId } = req.query; // Get userId from query parameters
+  console.log("User ID:", userId); // Log the userId for debugging
+  if(!userId) {
+    return res.status(400).json({ message: "User ID is required" });
+  }
+  try {
+    const properties = await property.find({ owner: userId });
+    if (!properties) {
+      return res.status(404).json({ message: "No properties found for this user" });
+    }
+    res.status(200).json({ message: "User Properties", properties });
+  } catch (error) {
+    console.log("Error while fetching user properties", error);
+    res.status(500).json({ message: "Error while fetching user properties" });
+  }
+}
+
+const GetUserActivity = async (req, res) => {
+  const { userId } = req.query; // Get userId from query parameters
+  console.log("User ID:", userId); // Log the userId for debugging
+  if(!userId) {
+    return res.status(400).json({ message: "User ID is required" });
+  }
+  try {
+    const activity = await LogActivity.find({ userId });
+    if (!activity) {
+      return res.status(404).json({ message: "No activity found for this user" });
+    }
+    res.status(200).json({ message: "User Activity", activity });
+  } catch (error) {
+    console.log("Error while fetching user activity", error);
+    res.status(500).json({ message: "Error while fetching user activity" });
+  }
+}
+
 module.exports = {
     DataAnalytics,
     UserManagement,
-    GetAllUsers
+    GetAllUsers,
+    GetUserProperties,
+    GetUserActivity
 }
