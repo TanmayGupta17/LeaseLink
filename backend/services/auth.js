@@ -11,7 +11,7 @@ function setUser(user){
     },
     secret,
     {
-        expiresIn: "1h"
+        expiresIn: "7 days"
     });
     return token;
 }

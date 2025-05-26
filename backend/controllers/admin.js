@@ -109,10 +109,79 @@ const GetUserActivity = async (req, res) => {
   }
 }
 
+const UpdateUser = async (req, res) => {
+    const { id } = req.params;
+    const { name, email, role } = req.body;
+  
+    try {
+      const userToUpdate = await user.findById(id);
+      if (!userToUpdate) {
+        return res.status(404).json({ message: "User not found" });
+      }
+  
+      userToUpdate.name = name || userToUpdate.name;
+      userToUpdate.email = email || userToUpdate.email;
+      userToUpdate.role = role || userToUpdate.role;
+  
+      await userToUpdate.save();
+  
+      res.status(200).json({ message: "User updated successfully", user: userToUpdate });
+    } catch (error) {
+      console.log("Error while updating user", error);
+      res.status(500).json({ message: "Error while updating user" });
+    }
+};
+
+const DeleteUser = async (req, res) => {
+    const { id } = req.params;
+  
+    try {
+      const userToDelete = await user.findById(id);
+      if (!userToDelete) {
+        return res.status(404).json({ message: "User not found" });
+      }
+  
+      await user.findByIdAndDelete(id);
+  
+      res.status(200).json({ message: "User deleted successfully" });
+    } catch (error) {
+      console.log("Error while deleting user", error);
+      res.status(500).json({ message: "Error while deleting user" });
+    }
+};
+
+const UpdateUserProperty = async (req, res) => {
+    const { id } = req.params;
+    const { title, description, price, type, status } = req.body;
+  
+    try {
+      const propertyToUpdate = await property.findById(id);
+      if (!propertyToUpdate) {
+        return res.status(404).json({ message: "Property not found" });
+      }
+  
+      propertyToUpdate.title = title || propertyToUpdate.title;
+      propertyToUpdate.description = description || propertyToUpdate.description;
+      propertyToUpdate.price = price || propertyToUpdate.price;
+      propertyToUpdate.type = type || propertyToUpdate.type;
+      propertyToUpdate.status = status || propertyToUpdate.status;
+  
+      await property.findByIdAndUpdate(id, propertyToUpdate, { new: true });
+  
+      res.status(200).json({ message: "Property updated successfully", property: propertyToUpdate });
+    } catch (error) {
+      console.log("Error while updating property", error);
+      res.status(500).json({ message: "Error while updating property" });
+    }
+}
+
 module.exports = {
     DataAnalytics,
     UserManagement,
     GetAllUsers,
     GetUserProperties,
-    GetUserActivity
+    GetUserActivity,
+    UpdateUser,
+    DeleteUser,
+    UpdateUserProperty
 }
