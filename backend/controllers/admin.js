@@ -175,6 +175,25 @@ const UpdateUserProperty = async (req, res) => {
     }
 }
 
+const DeleteUserProperty = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const propertyToDelete = await property.findById(id);
+
+    if (!propertyToDelete) {
+      return res.status(404).json({ message: "Property not found" });
+    }
+
+    await property.findByIdAndDelete(id);
+
+    return res.status(200).json({ message: "Property deleted successfully" });
+  } catch (error) {
+    console.error("Error while deleting property:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+};
+
 module.exports = {
     DataAnalytics,
     UserManagement,
@@ -183,5 +202,6 @@ module.exports = {
     GetUserActivity,
     UpdateUser,
     DeleteUser,
-    UpdateUserProperty
-}
+    UpdateUserProperty,
+    DeleteUserProperty,
+};
