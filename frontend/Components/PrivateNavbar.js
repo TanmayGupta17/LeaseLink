@@ -575,7 +575,7 @@ const PrivateNavbar = () => {
                             </a>
 
                             <a
-                              href="/admin/properties"
+                              href="/PropertyManagement"
                               className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                             >
                               <Database className="h-4 w-4 mr-3 text-gray-500" />
